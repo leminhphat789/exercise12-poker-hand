@@ -84,8 +84,8 @@ public final class Main {
         log("PASS: reject sizes 0-4, 6, 7; duplicates, overflow, null, bad card");
         log("PASS: immutable iterator/value; add/remove/query; invalid comparison");
         log("\nRESULT: " + checks + " checks passed, 0 failed.");
-        Files.createDirectories(Path.of("ảnh thực tế"));
-        Files.writeString(Path.of("ảnh thực tế/run-log.txt"), LOG);
+        Files.createDirectories(Path.of("ketqua"));
+        Files.writeString(Path.of("ketqua/run-log.txt"), LOG);
         if (Arrays.asList(args).contains("--gui")) {
             JFrame[] window = new JFrame[1];
             SwingUtilities.invokeAndWait(() -> {
@@ -101,7 +101,7 @@ public final class Main {
             Thread.sleep(1800);
             Rectangle bounds = window[0].getBounds();
             BufferedImage shot = new Robot().createScreenCapture(bounds);
-            ImageIO.write(shot, "png", Path.of("ảnh thực tế/screenshot.png").toFile());
+            ImageIO.write(shot, "png", Path.of("ketqua/screenshot.png").toFile());
             SwingUtilities.invokeAndWait(() -> window[0].dispose());
         }
     }
