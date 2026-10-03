@@ -1,0 +1,23 @@
+EXERCISE 12 - CHAPTER 3 | FIVE-CARD POKER
+Java 21.0.12.1 | Windows 11
+Run time: 2026-10-03T17:10:33.741941700+07:00[Asia/Ho_Chi_Minh]
+
+AS KD 9H 6C 3S    -> HIGH_CARD [14, 13, 9, 6, 3]
+AS AD 9H 6C 3S    -> ONE_PAIR [14, 9, 6, 3]
+AS AD 9H 9C 3S    -> TWO_PAIR [14, 9, 3]
+AS AD AH 6C 3S    -> THREE_OF_A_KIND [14, 6, 3]
+2S 3D 4H 5C 6S    -> STRAIGHT [6]
+AS JS 9S 6S 3S    -> FLUSH [14, 11, 9, 6, 3]
+AS AD AH 6C 6S    -> FULL_HOUSE [14, 6]
+AS AD AH AC 3S    -> FOUR_OF_A_KIND [14, 3]
+TS JS QS KS AS    -> STRAIGHT_FLUSH [14]
+
+TIE BREAKS AND ACE RULES
+PASS: 14 winner pairs, reverse comparisons, suit ties, card order
+PASS: wheel A2345 < 23456; TJQKA > 9TJQK; QKA23 is not straight
+
+CONTRACTS AND ENCAPSULATION
+PASS: reject sizes 0-4, 6, 7; duplicates, overflow, null, bad card
+PASS: immutable iterator/value; add/remove/query; invalid comparison
+
+RESULT: 65 checks passed, 0 failed.
